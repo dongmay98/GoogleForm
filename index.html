@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Form</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <input class="header-title" type="text" placeholder="제목없는 설문지" />
+        <input class="header-content" type="text" placeholder="설문지 설명" />
+      </header>
+
+      <article class="article">
+        <div class="article-title">
+          <input type="text" placeholder="제목없는 설문" />
+          <select class="select" name="type">
+            <option value="객관식" selected>객관식</option>
+            <option value="단답형">단답형</option>
+            <option value="장문형">장문형</option>
+            <option value="체크박스">체크박스</option>
+            <option value="드롭다운">드롭다운</option>
+          </select>
+        </div>
+
+        <section class="main-content">
+          <ul class="main-content-lists">
+            <!-- 객관식 컨테이너 -->
+            <li class="multi-choice-container" style="display: block;">
+              <div>
+                <input class="multi-choice-input" type="text" value="옵션1">  
+                <button class="multi-choice-x">X</button>
+              </div>
+              <button class="add-multi-option-btn">
+                <img src="./img/add.svg" alt="옵션추가" /> </button>
+            </li>
+            
+            <!-- 단답형 컨테이너 -->
+            <li class="short-answer-container" style="display: none;">
+              <!-- 단답형 관련 요소들 -->
+            </li>
+
+            <!-- 장문형 컨테이너 -->
+            <li class="long-answer-container" style="display: none;">
+              <!-- 장문형 관련 요소들 -->
+            </li>
+
+            <!-- 체크박스 컨테이너 -->
+            <li class="checkbox-container" style="display: none;">
+              <!-- 체크박스 관련 요소들 -->
+            </li>
+
+            <!-- 드롭다운 컨테이너 -->
+            <li class="dropdown-container" style= " display:none;" >
+              <div>
+                <input class="dropdown-input" type="text" value="옵션1">  
+                <button class="dropdown-x">X</button>
+              </div>
+              <button class="add-drop-option-btn">
+                <img src="./img/add.svg" alt="옵션추가" /> </button>
+                <!-- 드롭다운 관려요소들-->
+            </li >
+
+          </ul>
+          
+        </section>
+
+        <!-- <ul>
+          <li><input value="옵션1" /></li>
+        </ul> -->
+
+        
+
+        <div class="art-btn">
+          <button type="button" class="copy-art-btn">복사</button>
+          <button type="button" class="del-art-btn">삭제</button>
+        </div>
+      </article>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

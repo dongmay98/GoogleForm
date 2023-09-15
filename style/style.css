@@ -1,0 +1,88 @@
+body{
+  background-color: rgb(250, 242, 230);
+  width: 100%;
+}   
+
+.wrapper{
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 700px;
+}
+
+/* header */
+.header{
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  border-radius: 5px;
+  border-top: 5px solid rgb(250, 192, 127);
+}
+
+/* input */
+input{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+input:hover {
+  border-bottom-color: rgba(246, 243, 99, 0.951); /* 마우스를 올렸을 때의 밑줄 색상 */
+}
+input:focus {
+  outline: none;
+  border-bottom-color: rgb(288, 176, 84); /* 클릭한 후의 밑줄 색상 */
+}
+.header-title{
+  font-size: 24px;
+}
+.header-content{
+  font-size: 16px;
+}
+
+/* article */
+
+.article{
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 5px;
+  gap: 15px;
+}
+.article-title{
+  display: flex;
+  gap: 10px;
+
+}
+.article select{
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  
+}
+.article-title input{
+  font-size: 18px;
+}
+
+.add-option-btn{
+  background-color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+.art-btn{
+  width: 100%;
+  text-align: right;
+}
+
+.multi-choice-container div{
+  display: flex;
+  justify-content: space-between;
+}
