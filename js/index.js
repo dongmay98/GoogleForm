@@ -1,8 +1,11 @@
-const wrapper = document.querySelector(".wrapper");
-const select = wrapper.querySelector(".select");
+import WrapSelector from "./util/selectorUtil.js";
 
-const addMultiOptionBtn = wrapper.querySelector(".add-multi-option-btn");
-const mainContentLists = wrapper.querySelector(".main-content-lists");
+
+const wrapper = document.querySelector(".wrapper");
+const select = WrapSelector(wrapper, ".select");
+
+const addMultiOptionBtn = WrapSelector(wrapper, ".add-multi-option-btn");
+const mainContentLists = WrapSelector(wrapper,".main-content-lists");
 const mainLi = mainContentLists.querySelectorAll("li");
 // 드롭다운메뉴 셀렉터
 const multiChoiceContainer = mainContentLists.querySelectorAll(".multi-choice-container")[0];
