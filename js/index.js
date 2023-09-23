@@ -1,4 +1,4 @@
-import WrapSelector from "./util/selectorUtil.js";
+import {WrapSelector,WrapQuerySelectorAll} from "./util/selectorUtil.js";
 
 
 const wrapper = document.querySelector(".wrapper");
@@ -6,16 +6,16 @@ const select = WrapSelector(wrapper, ".select");
 
 const addMultiOptionBtn = WrapSelector(wrapper, ".add-multi-option-btn");
 const mainContentLists = WrapSelector(wrapper,".main-content-lists");
-const mainLi = mainContentLists.querySelectorAll("li");
+const mainLi = WrapQuerySelectorAll(mainContentLists , "li");
 // 드롭다운메뉴 셀렉터
-const multiChoiceContainer = mainContentLists.querySelectorAll(".multi-choice-container")[0];
-const shortAnswerContainer = mainContentLists.querySelector(".short-answer-container");
-const longAnswerContainer = mainContentLists.querySelector(".long-answer-container");
-const checkboxContainer = mainContentLists.querySelector(".checkbox-container");
-const dropdownContainer = mainContentLists.querySelector(".dropdown-container");
+const multiChoiceContainer = WrapQuerySelectorAll(mainContentLists , ".multi-choice-container")[0];
+const shortAnswerContainer = WrapQuerySelectorAll(mainContentLists , ".short-answer-container");
+const longAnswerContainer = WrapQuerySelectorAll(mainContentLists , ".long-answer-container");
+const checkboxContainer = WrapQuerySelectorAll(mainContentLists , ".checkbox-container");
+const dropdownContainer = WrapQuerySelectorAll(mainContentLists , ".dropdown-container");
 
 //객관식 옵션삭제
-const multiChoiceX = document.querySelector("multi-choice-x")
+const multiChoiceX = WrapSelector(wrapper,"multi-choice-x")
 
 let optionCount = 1; // 옵션 카운트 초기값
 
